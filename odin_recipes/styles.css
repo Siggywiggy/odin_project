@@ -1,0 +1,45 @@
+* {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: rgb(255, 245, 207);
+    font-size: 14;
+    line-height:1.5;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+}
+
+h2 {
+    color: darkcyan;
+    text-align: center
+}
+
+p {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size:52;
+    color: mediumseagreen;
+}
+
+img {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul li {
+    color: darkgoldenrod;
+}
+
+ol li  {
+    background-color: lightgreen;
+    text-align: right;
+}
