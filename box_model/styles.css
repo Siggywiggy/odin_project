@@ -1,0 +1,35 @@
+/*set absolutely everything to border-box style*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+
+.box-one {
+    background-color: #EB5757;
+    border: 20px solid #9b51e0;
+    padding: 10px;
+    margin: 60px;
+    height: 300px;
+    width: 700px;
+    box-sizing: content-box;
+    display: inline-block;
+}
+
+.box-two {
+    background-color: #2D9CDB;
+    border: 30px solid #27AE60;
+    padding: 10px;
+    margin: 70px;
+    height: 300px;
+    width: 700px;
+    display: inline-block;
+    box-sizing: border-box;
+}
