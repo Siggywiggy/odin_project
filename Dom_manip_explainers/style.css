@@ -1,0 +1,100 @@
+/* A minimal reset for a simple document */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+/* Page styling */
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    background-color: #ddd;
+}
+h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+/* The traffic light container */
+#widget {
+    background-color: #000;
+    text-align: center;
+    max-width: 600px;
+    padding: 1.5em 0;
+    border-radius: 12px;
+    margin: 2.0em auto 2.5em;
+}
+#widget h1 {
+    color: #ddd;
+    margin: 0.5em;
+}
+#widget div {
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+    border: 4px solid #bbb;
+    margin: 2.5em auto 4.0em;
+    background: #333;
+    background: radial-gradient(#444, #111);
+}
+
+/* Button styling */
+#widget button {
+    color: #fff;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1.0em;
+    width: 4.25em;
+    margin: 0 0.5em 1.0em;
+    padding: 0.5em;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #444;
+    cursor: pointer;
+}
+#widget button[disabled] {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+#widget button:hover {
+    background-color: #666;
+}
+#widget button:active {
+    background-color: #c00;
+}
+#widget button:focus {
+    outline: none;
+    background-color: #367fff;
+}
+
+/* Light colour classes */
+#widget div.stop {
+    background: #f81b10;
+    background: radial-gradient(#fa635b, #b70e05);
+}
+#widget div.get-ready {
+    background: #f8bc19;
+    background: radial-gradient(#fad266, #c18f06);
+}
+#widget div.go {
+    background: #61a010;
+    background: radial-gradient(#8ce916, #385d09);
+}
+
+/* In case JavaScript is turned off */
+.prompt {
+    color: #ccc;
+}
+.warning {
+    color: #fff;
+    background-color: #c00;
+    line-height: 1.4;
+    width: 80%;
+    padding: 8px 15px;
+    margin: 0 auto;
+}

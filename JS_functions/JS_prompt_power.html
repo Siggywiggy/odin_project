@@ -7,19 +7,19 @@
 </head>
 <body>
     <script>
-        let x = prompt("Please enter the number:");
-        let y = prompt("Enter the power:");
+        let x = + (prompt("Please enter the number:"));
+        let y = + (prompt("Enter the power:"));
 
         function numberPower(a, b) {
             if ((a < 1) || (b < 1)) {
                 return "Only use natural numbers larger then 1";
-            } else if (!(Number.isSafeInteger(b))){
-                return "Numbers need to be whole numbers!!!!";
+            } else if ((!(Number.isInteger(b))) || (!(Number.isInteger(a)))) {
+                return "Numbers need to be whole numbers!";
             } else {
                 return Math.pow(a,b);
             }
             
-        };
+        }
 
         alert(numberPower(x,y));
         

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(num) {
+            return + num + 7;
+        }
+
+        function multiply(a,b) {
+            return a * b;
+        }
+
+        function capitalize(string) {
+            let stringLower = string.toLowerCase();
+            let stringEnd = string.slice(1);
+            let stringStart = string.charAt(0).toUpperCase();
+            return stringStart + stringEnd;
+        }
+
+        function lastLetter(string)  {
+            return string.charAt(string.length-1)
+        }
+
+        alert(add(5))
+        alert(multiply(2,3))
+        alert(capitalize("testing"))
+        alert(lastLetter("testing"))
+
+
+
+
+
+    </script>
+</body>
+</html>
