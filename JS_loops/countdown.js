@@ -1,4 +1,4 @@
-const output = document.querySelector('.output');
+/*const output = document.querySelector('.output');
 output.textContent = "";
 
 // loop from 10 down to 0 
@@ -14,7 +14,7 @@ for (let i = 10; i >= 0; i-- ) {
     para.textContent = i;
   }
   // append para to output
-  output.appendChild(para);
+  // output.appendChild(para);
 }
-
+*/
 
