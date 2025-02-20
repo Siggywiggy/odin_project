@@ -1,0 +1,6 @@
+.pinkDiv {
+    border:solid black;
+    border-radius: 0.5em;
+    background-color: pink;
+    border-width: 1px;
+}
