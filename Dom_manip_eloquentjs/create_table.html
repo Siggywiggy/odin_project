@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1>Mountains</h1>
+
+<div id="mountains"></div>
+
+<script>
+  const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
+
+  // Your code here
+
+    // create a table element 
+    let tableContent = document.createElement("table")
+    document.querySelector(".mountains").appendChild(tableContent)
+    // create <tr> row element - creating the heading cells
+        //  take the first object in the dataset - array[0]
+            // append cells <th> per property name in the array element
+
+    // loop trough MOUNTAINS array 
+        // create <tr> row element for every object
+            // loop trough properties in the object
+                // insert <td> regular cell per onject property value
+
+
+</script>
+</body>
+</html>
