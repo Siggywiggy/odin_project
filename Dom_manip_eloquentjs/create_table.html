@@ -23,20 +23,52 @@
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
   ];
 
-  // Your code here
+  // Creating the initial table with header rows
 
     // create a table element 
-    let tableContent = document.createElement("table")
-    document.querySelector(".mountains").appendChild(tableContent)
-    // create <tr> row element - creating the heading cells
-        //  take the first object in the dataset - array[0]
-            // append cells <th> per property name in the array element
+  let tableContent = document.createElement("table")
+    // append the table to the div with id="mountains"
+  document.querySelector("#mountains").appendChild(tableContent)
+    // create <tr> row element for the heading cells
+  const headerRow = document.createElement("tr")
+  tableContent.appendChild(headerRow)
+    //  take the first object in the dataset - array[0]
+    // loop trough all keys in array[0]
+  for (let key in MOUNTAINS[0]) {
+      // create a cell 
+    let cell = document.createElement("th");
+      // insert the key in to the cell
+    cell.textContent = key;
+    headerRow.appendChild(cell);
+    }
 
-    // loop trough MOUNTAINS array 
-        // create <tr> row element for every object
-            // loop trough properties in the object
-                // insert <td> regular cell per onject property value
+  // populating the table with data from object
+  // loop trough MOUNTAINS array
+  MOUNTAINS.forEach(function(mountainObject) {
+    // create a row per object 
+    let row = document.createElement("tr");
+    // append the row to the main table
+    tableContent.appendChild(row);
+    // loop trough the object keys
+    for (let key in mountainObject) {
+      // console.log(`${key}: ${mountainObject[key]}`);
+      // create a cell per key
+      let cell = document.createElement("td");
+      // insert the value in to the cell
+      cell.textContent = mountainObject[key];
+      row.appendChild(cell);
+    }
+  })
 
+  // select all cell elements in document 
+  let cells = Array.from(document.querySelectorAll("td"));
+  // loop trough all the cell elements
+  cells.forEach(function(tdobject){
+    // check if the content is number?
+    if (!isNaN(tdobject.textContent))
+    // if so set the style.textAlign property to "right"
+    tdobject.style.textAlign = "right";
+  })
 
 </script>
 </body>
