@@ -17,17 +17,26 @@
     recursiveSearch(node, tagName)
     function recursiveSearch(node, tagName) {
         if (node.nodeType == Node.ELEMENT_NODE) {
+            // base case
+            if (node.nodeName.toLowerCase() === tagName) {
+                    console.log(`tag found! - ${node.nodeName}`)
+                    nodes.push(node);
+            } 
+            // also check for child nodes
             if (node.hasChildNodes()) {
-                console.log("children found")
-                console.log(node.childNodes)
+                console.log(`children found: ${Array.from(node.childNodes)}`)
+                // recursively call the function on every one of the child nodes
                 for (let child of node.childNodes) {
                     recursiveSearch(child, tagName);
                 }
-            } else if (node.nodeName.toLowerCase() == tagName) {
-                console.log("tag found!")
-                nodes.push(node);
-            } else {
-                console.log("no tag found!")
+            } else if (!node.hasChildNodes()) { 
+                console.log(`${node.nodeName} has no further child nodes`)
+                if (node.nodeName.toLowerCase() === tagName) {
+                    console.log("tag found!")
+                    nodes.push(node);
+                } else if (node.nodeName.toLowerCase() !== tagName) {
+                    console.log("no matching tag found!")
+                }
             }
         } else if (node.nodeType == Node.TEXT_NODE){
             console.log(`text node found - ${node.textContent}`);
