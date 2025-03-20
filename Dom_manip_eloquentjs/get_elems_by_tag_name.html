@@ -24,22 +24,22 @@
             } 
             // also check for child nodes
             if (node.hasChildNodes()) {
-                console.log(`children found: ${Array.from(node.childNodes)}`)
+                //console.log(`children found: ${Array.from(node.childNodes)}`)
                 // recursively call the function on every one of the child nodes
                 for (let child of node.childNodes) {
                     recursiveSearch(child, tagName);
                 }
             } else if (!node.hasChildNodes()) { 
-                console.log(`${node.nodeName} has no further child nodes`)
+                //console.log(`${node.nodeName} has no further child nodes`)
                 if (node.nodeName.toLowerCase() === tagName) {
-                    console.log("tag found!")
+                    //console.log("tag found!")
                     nodes.push(node);
                 } else if (node.nodeName.toLowerCase() !== tagName) {
-                    console.log("no matching tag found!")
+                    //console.log("no matching tag found!")
                 }
             }
         } else if (node.nodeType == Node.TEXT_NODE){
-            console.log(`text node found - ${node.textContent}`);
+            //console.log(`text node found - ${node.textContent}`);
         }
     }
     return nodes;
@@ -49,10 +49,10 @@
 
   console.log(byTagName(document.body, "h1").length);
   // → 1
-  //console.log(byTagName(document.body, "span").length);
+  console.log(byTagName(document.body, "span").length);
   // → 3
-  //let para = document.querySelector("p");
-  //console.log(byTagName(para, "span").length);
+  let para = document.querySelector("p");
+  console.log(byTagName(para, "span").length);
   // → 2
 </script>
 </body>
